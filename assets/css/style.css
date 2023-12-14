@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,100&display=swap');
+
+
+/*===================  ESTILOS GERAIS =================*/
+:root{
+    --color-1:#191A1E;
+    --color-2: red;
+    --color-from: #43474A;  
+    --color-3: #888888;
+}
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+
+a, abbr{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+input, button{
+    border: none;
+    background-color: transparent;
+}
+input{
+    outline: none;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+.container{
+    max-width: 1248px;
+    margin: 0 auto;
+}
+
+
+
+/*Estilizando o HEADER*/
+
+header{
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    width: 100%;
+    z-index: 100;
+}
+.content-logo{
+    padding: 10px 0px;
+}
+.content-logo img{
+    width: 120px;
+}
+.content-navBar{
+    background-color: var(--color-1);
+    padding: 15px 0px;
+}
+.navBar, 
+.list-navBar,
+.content-media-social .container{
+    display: flex;
+    align-items: center;
+}
+.navBar{
+    justify-content: space-between;
+}
+.list-navBar{
+    gap: 30px;
+}
+.link-navBar, 
+.search input,
+.search input::placeholder,
+.search button,
+.content-media-social{
+    color: white;
+}
+.search{
+    background-color: var(--color-from);
+    padding: 5px 15px;
+}
+
+
+.search button{
+    background-color: var(--color-2);
+    padding: 5px 10px;
+}
+.content-media-social{
+    background-color: var(--color-3);
+}
+.content-media-social .container{
+    justify-content: space-between;
+    padding: 8px 0px;
+}
+.link-navBar i{
+    font-size: 22px;
+}
+
+@media (max-width: 575px) {
+    .content-logo{
+        display: none;
+    }
+    header .content-logo-mobile img{
+        width: 6rem;
+    }
+    .content-navBar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navBar .list-navBar{
+        display: none;
+    }
+}
+
+/*Estilizando notias em destaque*/
+.content-destaque{
+    margin: 5px 0px;
+}
+.destaques{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 100px);
+}
+.destaque-card{
+    background-color: var(--color-3);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.destaque-card:nth-child(1){
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 4;
+    margin-right: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.719)), url(https://www.nepin.com.br/wp-content/uploads/2023/06/Qual-e-o-impacto-da-inteligencia-artificial-na-Industria.jpg) ;
+}
+.destaque-card:nth-child(2){
+    grid-row: 1 / span 2;
+    margin-bottom: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.781)), url(https://cdn.record.pt/images/2023-10/img_920x519$2023_10_08_09_18_26_2179207.jpg) ;
+}
+.destaque-card:nth-child(3){
+    height: 200px;
+    grid-row-end: 3;
+    grid-row-start: 5;
+    margin-bottom: 5px;
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.856)), url();
+}
+.info-card{
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    padding: 10px;
+}
+.info-card,
+.info-card h1 a,
+.content-block{
+    color: white;
+}
+.info-card h1 a:hover{
+    text-decoration: underline;
+}
+.destaque-card:nth-child(1) .info-card{
+    width: 400px;
+}
+.destaque-card:nth-child(2) .info-card,
+.destaque-card:nth-child(3) .info-card{
+    width: 250px;
+}
+.destaque-card:nth-child(2) .info-card h1,
+.destaque-card:nth-child(3) .info-card h1{
+    font-size: 18px;
+}
+.destaque-card:nth-child(2) .info-card p,
+.destaque-card:nth-child(3) .info-card p{
+    font-size: 12px;
+}
+.content-block{
+    background-color: var(--color-2);
+    font-size: 12px;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+
+.destaques2{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.destaque-card2{
+    height: 200px;
+    background-color: #888888;
+    margin-top: 5px;
+    margin-right: 5px;
+    position: relative;
+}
+.info-card2{
+    position: absolute;
+    bottom: 10px;
+    font-size: 12px;
+    padding: 10px;
+}
+.info-card2 h1 a, 
+.info-card2{
+    color: white;
+}
+.info-card2 h1 a:hover{
+    text-decoration: underline;
+}
+
+.destaque-card2:nth-child(1){
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.685)), url();
+}
+.destaque-card2:nth-child(2){
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.685)), url();
+}
+.destaque-card2:nth-child(3){
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.685)), url();
+}
+.destaque-card2:nth-child(4){
+    background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.685)), url();
+}
+
+
+
+
+
+/*=============== ESTILIZANDO O CONTEUDO PRINCIPAL*/
+
+.content-main{
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    padding: 3rem 0rem;
+}
+
+.content-notia{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    grid-column-gap: 20px;
+}
+.img-noticia{
+    width: 300px;
+    height: 200px;
+    background-color: #43474A;
+}
+.info-noticia h1{
+    margin-bottom: 20px;
+}
+
+
+
+
+.content-primeiro-post{
+    margin-top: 20px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: 200px;
+    background-color: #43474A;
+    color: white;
+    position: relative;
+}
+
+.pots-noticias{
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    grid-column-gap: 15px;
+    margin-bottom: 14px;
+}
+.img-post-noticia{
+    width: 150px;
+    height: 100px;
+    background-color: #191A1E;
+}
+
+
+
+
+footer{
+    background-color: black;
+    color: white;
+    
+}
+.content-posts-footer{
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    justify-content: space-between;
+    padding: 3rem 0rem;
+}
+.content-info-post-news,
+.content-image{
+    margin: 20px 0px;
+}
+.content-image{
+    background-color: #43474A;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    
+}
+.title-image-post{
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
+}
+.footer{
+    width: 100%;
+    background-color: #191A1E;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.content-cadastro{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro{
+    background-color: var(--color-1);
+    border-top: 4px solid #FE0000;
+    width: 380px;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+.title-login{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.cadastro label{
+    margin-bottom: .5rem;
+}
+.cadastro input{
+    background-color: #262E3B;
+    padding: 10px 20px;
+    margin-bottom: 1rem;
+    color: var(--color-4);
+}
+.cadastro button{
+    color: #FFF;
+    background-color: #FE0000;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.img-notia1{
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: block;
+}
+.img-notia1{
+    background-image: url(https://www.jornaldeangola.ao/fotos/frontend_1/noticias/f-hasunwkaajxc8_863000596568d7e274bfa.jpg);
+}
+.img-notia2{
+    background-image: url(https://www.jornaldeangola.ao/fotos/frontend_1/noticias/whatsapp_image_2023-11-27_at_18_1891705781656614feadd7a.05.01.jpeg);
+}
+.img-notia3{
+    background-image: url(https://www.jornaldeangola.ao/fotos/frontend_1/noticias/whatsapp_image_2023-12-13_at_21_429268495657aa95a05949.37.28.jpeg);
+}
+.btn-cadastro, .btn-login{
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
+.btn-login{
+    margin-right: 15px;
+}
+.punchline{
+    transition: all ease-in-out .4s;
+}
